@@ -1,31 +1,80 @@
-# @honeybadger-io/react
+# Honeybadger React.js Integration
+[![Build Status](https://travis-ci.org/honeybadger-io/honeybadger-react.svg?branch=master)](https://travis-ci.org/honeybadger-io/honeybadger-react)
 
-> React.js integration for honeybadger
+> [React.js integration for Honeybadger.io](https://www.honeybadger.io/for/javascript/?utm_source=github&utm_medium=readme&utm_campaign=react&utm_content=React.js+integration+for+Honeybadger.io)
 
-[![NPM](https://img.shields.io/npm/v/@honeybadger-io/react.svg)](https://www.npmjs.com/package/@honeybadger-io/react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+## Documentation and Support
 
-## Install
+For comprehensive documentation and support, [check out our documentation site](https://docs.honeybadger.io/lib/javascript/index.html).
 
-```bash
-npm install --save @honeybadger-io/react
+The documentation includes a detailed [React integration guide](https://docs.honeybadger.io/lib/javascript/integration/react.html)
+
+## Project Goals
+
+The goal is to provide an idiomatic, simple integration of Honeybadger's
+exception monitoring service with React.js applications.
+
+## Project Status
+
+This version is considered suitable for preview.
+
+## Limitations
+
+Honeybadger-react hooks in to the error handler in React. This means we only
+notify Honeybadger of React context for errors that React handles. Some
+errors inside React code may propagate to the window onerror handler
+instead.
+
+In those cases, Honeybadger Javascript library's default error notifier
+is invoked, which will contain a stack trace but none of the React
+variables.
+
+## Key Assumptions
+
+This project is built using a webpack-based React template. It's possible
+your own build environment may be just different enough to require some
+adjustments. If you find that our artifacts don't quite meet your needs,
+please [file an issue on GitHub](https://github.com/honeybadger-io/honeybadger-react/issues).
+
+## Changelog
+
+See https://github.com/honeybadger-io/honeybadger-react/blob/master/CHANGELOG.md
+
+## Contributing
+
+1. Fork it.
+2. Create a topic branch `git checkout -b my_branch`
+3. Commit your changes `git commit -am "Boom"`
+3. Push to your branch `git push origin my_branch`
+4. Send a [pull request](https://github.com/honeybadger-io/honeybadger-react/pulls)
+
+## Development
+
+``` bash
+# install dependencies
+yarn install
+
+# Serve the demo app with hot reload at localhost:8080
+HONEYBADGER_API_KEY=yourkey yarn run dev
+
+# build for production with minification
+yarn run build
+
+# build for production and view the bundle analyzer report
+yarn run build --report
+
+# run unit tests
+yarn run unit
+
+# run e2e tests
+HONEYBADGER_API_KEY=yourkey yarn run e2e
+
+# run all tests
+HONEYBADGER_API_KEY=yourkey yarn test:all
 ```
 
-## Usage
+For a detailed explanation on how things work, check out the [guide](http://reactjs-templates.github.io/webpack/) and [docs for react-loader](http://reactjs.github.io/react-loader).
 
-```jsx
-import React, { Component } from 'react'
+### License
 
-import MyComponent from '@honeybadger-io/react'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
-
-## License
-
-MIT © [JasonTrue](https://github.com/JasonTrue)
+*honeybadger-react* is MIT licensed. See the [LICENSE](https://raw.github.com/honeybadger-io/honeybadger-react/master/LICENSE) file in this repository for details.

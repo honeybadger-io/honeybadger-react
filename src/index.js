@@ -1,22 +1,48 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
+class DefaultErrorComponent extends Component {
   render() {
-    const {
-      text
-    } = this.props
-
     return (
-      <div className={styles.test}>
-        Example Component: {text}
+      <div className='error'>
+        <div>An Error Occurred</div>
+        <div>{this.error}</div>
+        <div>{this.info}</div>
       </div>
     )
+  }
+}
+
+export default class HoneyBadgerErrorBoundary extends Component {
+  static propTypes = {
+    honeybadger: PropTypes.object,
+    children: PropTypes.element,
+    ErrorComponent: PropTypes.element || PropTypes.function
+  }
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      error: null,
+      info: null,
+      errorOccurred: false
+    }
+  }
+
+  static getDerivedStateFromError (error) {
+    return { errorOccurred: true, error: error }
+  }
+
+  componentDidCatch (error, info) {
+    this.setState({errorOccurred: true, error: error, info: info})
+    this.props.honeybadger.notify(error, { context: info })
+  }
+  render() {
+    if (this.state.errorOccurred) {
+      const {ErrorComponent} = this.props
+      return ErrorComponent ? React.createElement(ErrorComponent, this.state) : <DefaultErrorComponent />
+    } else {
+      return this.props.children
+    }
   }
 }

@@ -1,10 +1,13 @@
 {
   "name": "@honeybadger-io/react",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "React.js integration for honeybadger",
-  "author": "JasonTrue",
+  "author": "Jason Truesdell <jason@yuzuten.com> (https://github.com/JasonTrue)",
   "license": "MIT",
-  "repository": "@honeybadger-io/react",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/honeybadger-io/honeybadger-vue.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -53,9 +56,14 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "react-test-renderer": "^16.6.3",
+    "sinon": "^7.1.1"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "honeybadger-js": "^0.5.5"
+  }
 }

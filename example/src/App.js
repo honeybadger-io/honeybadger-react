@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from '@honeybadger-io/react'
+import GoodComponent from './GoodComponent'
+import BuggyComponent from './BuggyComponent'
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <GoodComponent />
+        <BuggyComponent />
       </div>
     )
   }
