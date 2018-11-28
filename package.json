@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/honeybadger-io/honeybadger-vue.git"
+    "url": "git+ssh://git@github.com/honeybadger-io/honeybadger-react.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
