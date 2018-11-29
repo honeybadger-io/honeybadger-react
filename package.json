@@ -8,9 +8,10 @@
     "type": "git",
     "url": "git+ssh://git@github.com/honeybadger-io/honeybadger-react.git"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
+  "main": "dist/honeybadger-react.cjs.js",
+  "module": "dist/honeybadger-react.esm.js",
+  "unpkg": "dist/honeybadger-react.js",
+  "jsnext:main": "dist/honeybadger-react.esm.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -56,6 +57,7 @@
     "dist"
   ],
   "dependencies": {
-    "honeybadger-js": "^0.5.5"
+    "honeybadger-js": "^0.5.5",
+    "rollup-plugin-uglify": "^6.0.0"
   }
 }

@@ -5,6 +5,7 @@ import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
+import { uglify } from "rollup-plugin-uglify";
 
 import pkg from './package.json'
 
@@ -26,6 +27,15 @@ export default {
       sourcemap: true,
       sourcemapPathTransform: relativePath => {
         // will transform e.g. "src/main.js" -> "main.js"
+        return path.relative('src', relativePath)
+      }
+    },
+    {
+      file: pkg.unpkg,
+      format: 'iife',
+      name: 'HoneybadgerReact',
+      sourcemap: true,
+      sourcemapPathTransform: relativePath => {
         return path.relative('src', relativePath)
       }
     }
