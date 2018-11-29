@@ -7,7 +7,7 @@ import Honeybadger from 'honeybadger-js'
 import ErrorBoundary from '@honeybadger-io/react'
 
 const config = {
-  api_key: (process.env.HONEYBADGER_API_KEY || prompt('Enter the API key for your Honeybadger project:'))
+  api_key: (process.env.REACT_APP_HONEYBADGER_API_KEY || prompt('Enter the API key for your Honeybadger project:'))
 }
 
 const honeybadger = Honeybadger.configure(config)

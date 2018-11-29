@@ -14,12 +14,20 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
-      sourcemap: true
+      sourcemap: true,
+      sourcemapPathTransform: relativePath => {
+        // will transform e.g. "src/main.js" -> "main.js"
+        return path.relative('src', relativePath)
+      }
     },
     {
       file: pkg.module,
       format: 'es',
-      sourcemap: true
+      sourcemap: true,
+      sourcemapPathTransform: relativePath => {
+        // will transform e.g. "src/main.js" -> "main.js"
+        return path.relative('src', relativePath)
+      }
     }
   ],
   plugins: [
