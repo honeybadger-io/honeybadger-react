@@ -31,7 +31,8 @@ variables.
 
 ## Key Assumptions
 
-This project is built using a webpack-based React template. It's possible
+This project is built using create-react-library with rollup and generates
+artifacts in commonjs, esm and umd formats. It's possible
 your own build environment may be just different enough to require some
 adjustments. If you find that our artifacts don't quite meet your needs,
 please [file an issue on GitHub](https://github.com/honeybadger-io/honeybadger-react/issues).
@@ -65,13 +66,6 @@ yarn run build --report
 
 # run unit tests
 yarn run unit
-
-# run e2e tests
-HONEYBADGER_API_KEY=yourkey yarn run e2e
-
-# run all tests
-HONEYBADGER_API_KEY=yourkey yarn test:all
-```
 
 For a detailed explanation on how things work, check out the [guide](http://reactjs-templates.github.io/webpack/) and [docs for react-loader](http://reactjs.github.io/react-loader).
 
