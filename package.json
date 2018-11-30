@@ -52,8 +52,7 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-uglify": "^6.0.0",
     "rollup-plugin-url": "^1.4.0",
-    "sinon": "^7.1.1",
-
+    "sinon": "^7.1.1"
   },
   "files": [
     "dist"
