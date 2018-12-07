@@ -5,7 +5,6 @@ import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
-import { uglify } from "rollup-plugin-uglify";
 
 import pkg from './package.json'
 
@@ -19,7 +18,8 @@ export default {
       sourcemapPathTransform: relativePath => {
         // will transform e.g. "src/main.js" -> "main.js"
         return path.relative('src', relativePath)
-      }
+      },
+
     },
     {
       file: pkg.module,
@@ -37,6 +37,10 @@ export default {
       sourcemap: true,
       sourcemapPathTransform: relativePath => {
         return path.relative('src', relativePath)
+      },
+      globals: {
+        'react': 'React',
+        'prop-types': 'PropTypes'
       }
     }
   ],

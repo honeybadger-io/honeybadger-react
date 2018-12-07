@@ -55,19 +55,22 @@ See https://github.com/honeybadger-io/honeybadger-react/blob/master/CHANGELOG.md
 # install dependencies
 yarn install
 
-# Serve the demo app with hot reload at localhost:8080
-HONEYBADGER_API_KEY=yourkey yarn run dev
-
-# build for production with minification
-yarn run build
-
-# build for production and view the bundle analyzer report
-yarn run build --report
+# build for production
+yarn build
 
 # run unit tests
-yarn run unit
+yarn test
+```
 
-For a detailed explanation on how things work, check out the [guide](http://reactjs-templates.github.io/webpack/) and [docs for react-loader](http://reactjs.github.io/react-loader).
+# Serve the demo app with hot reload at localhost:3000
+
+```bash
+cd example
+yarn install
+REACT_APP_HONEYBADGER_API_KEY=b425b636 yarn start
+```
+
+For a detailed explanation on how hot reloading works, check out the [guide](http://reactjs-templates.github.io/webpack/) and [docs for react-loader](http://reactjs.github.io/react-loader).
 
 ### License
 
