@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/@honeybadger-io/react/precache-manifest.34e840fa3bae8356075f53ca657ef007.js"
+  "/honeybadger-io/react/precache-manifest.7721974777bb6e946a8f33127c71af8a.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/@honeybadger-io/react/index.html", {
+workbox.routing.registerNavigationRoute("/honeybadger-io/react/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

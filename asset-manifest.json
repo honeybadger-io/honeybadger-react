@@ -1,13 +1,13 @@
 {
-  "main.css": "/@honeybadger-io/react/static/css/main.9849cea3.chunk.css",
-  "main.js": "/@honeybadger-io/react/static/js/main.944596e0.chunk.js",
-  "main.js.map": "/@honeybadger-io/react/static/js/main.944596e0.chunk.js.map",
-  "static/js/1.a093d828.chunk.js": "/@honeybadger-io/react/static/js/1.a093d828.chunk.js",
-  "static/js/1.a093d828.chunk.js.map": "/@honeybadger-io/react/static/js/1.a093d828.chunk.js.map",
-  "runtime~main.js": "/@honeybadger-io/react/static/js/runtime~main.df2bed21.js",
-  "runtime~main.js.map": "/@honeybadger-io/react/static/js/runtime~main.df2bed21.js.map",
-  "static/css/main.9849cea3.chunk.css.map": "/@honeybadger-io/react/static/css/main.9849cea3.chunk.css.map",
-  "index.html": "/@honeybadger-io/react/index.html",
-  "precache-manifest.34e840fa3bae8356075f53ca657ef007.js": "/@honeybadger-io/react/precache-manifest.34e840fa3bae8356075f53ca657ef007.js",
-  "service-worker.js": "/@honeybadger-io/react/service-worker.js"
+  "main.css": "/honeybadger-io/react/static/css/main.9849cea3.chunk.css",
+  "main.js": "/honeybadger-io/react/static/js/main.df6c00cc.chunk.js",
+  "main.js.map": "/honeybadger-io/react/static/js/main.df6c00cc.chunk.js.map",
+  "static/js/1.a093d828.chunk.js": "/honeybadger-io/react/static/js/1.a093d828.chunk.js",
+  "static/js/1.a093d828.chunk.js.map": "/honeybadger-io/react/static/js/1.a093d828.chunk.js.map",
+  "runtime~main.js": "/honeybadger-io/react/static/js/runtime~main.3ff7424f.js",
+  "runtime~main.js.map": "/honeybadger-io/react/static/js/runtime~main.3ff7424f.js.map",
+  "static/css/main.9849cea3.chunk.css.map": "/honeybadger-io/react/static/css/main.9849cea3.chunk.css.map",
+  "index.html": "/honeybadger-io/react/index.html",
+  "precache-manifest.7721974777bb6e946a8f33127c71af8a.js": "/honeybadger-io/react/precache-manifest.7721974777bb6e946a8f33127c71af8a.js",
+  "service-worker.js": "/honeybadger-io/react/service-worker.js"
 }
