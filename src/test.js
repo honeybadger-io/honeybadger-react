@@ -5,7 +5,7 @@ import HbErrorBoundary from './'
 import sinon from 'sinon'
 
 describe('HoneybadgerReact', () => {
-  let config = {api_key: 'FFAACCCC00', onerror: false}
+  let config = {api_key: 'FFAACCCC00'}
   let honeybadger = Honeybadger.configure(config)
 
   class Clean extends React.Component {
@@ -54,7 +54,7 @@ describe('HoneybadgerReact', () => {
     sandbox.spy(honeybadger, 'notify')
     TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger}><Broken /></HbErrorBoundary>)
     afterNotify(done, function () {
-      expect(honeybadger.notify.called).toBeTruthy()
+      expect(honeybadger.notify.calledOnce).toBeTruthy()
     })
   })
 
@@ -67,7 +67,9 @@ describe('HoneybadgerReact', () => {
   })
 
   describe('when a custom error component is available', () => {
-    it('should render a custom error message when a component errors', () => {
+    it('should render a custom error message when a component errors', (done) => {
+      sandbox.spy(honeybadger, 'notify')
+
       const MyError = jest.fn(() => 'custom error view')
       TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger} ErrorComponent={MyError}><Broken /></HbErrorBoundary>)
       expect(MyError).toBeCalledWith({
@@ -75,6 +77,10 @@ describe('HoneybadgerReact', () => {
         info: { componentStack: expect.any(String) },
         errorOccurred: expect.any(Boolean)
       }, {})
-    })
+      // Still want to ensure notify is only called once. The MyError component will be created twice by React.
+      afterNotify(done, function () {
+        expect(honeybadger.notify.calledOnce).toBeTruthy()
+      })
+     })
   })
 })
