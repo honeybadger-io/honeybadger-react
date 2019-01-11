@@ -9,6 +9,7 @@
     "url": "git+ssh://git@github.com/honeybadger-io/honeybadger-react.git"
   },
   "main": "dist/honeybadger-react.cjs.js",
+  "types": "./honeybadger-react.d.ts",
   "module": "dist/honeybadger-react.esm.js",
   "unpkg": "dist/honeybadger-react.js",
   "jsnext:main": "dist/honeybadger-react.esm.js",
