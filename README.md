@@ -18,6 +18,49 @@ exception monitoring service with React.js applications.
 
 This version is considered suitable for preview.
 
+## Usage
+
+### HoneyBadgerErrorBoundary Props
+
+<dl>
+  <dt><code>honeybadger</code></dt>
+  <dd>The Honeybadger config object.</dd>
+  <dt><code>children</code></dt>
+  <dd>Your root `<App />` component.</dd>
+
+  <dt><code>ErrorComponent</code> (optional &mdash; default: "DefaultErrorComponent")</dt>
+  <dd>The component that will be rendered in <code> ErrorBoundary </code> children's place when an error is thrown during React rendering. The default value for this prop is the <code>DefaultErrorComponent</code>.
+</dd>
+</dl>
+
+### In your main.js
+
+```jsx
+ReactDOM.render(
+  <ErrorBoundary honeybadger={honeybadger}>
+    <App />
+  </ErrorBoundary>,
+  document.getElementById('root')
+)
+
+```
+
+### DefaultErrorComponent
+
+```jsx
+class DefaultErrorComponent extends Component {
+  render() {
+    return (
+      <div className='error'>
+        <div>An Error Occurred</div>
+        <div>{this.error}</div>
+        <div>{this.info}</div>
+      </div>
+    )
+  }
+}
+```
+
 ## Limitations
 
 Honeybadger-react hooks in to the error handler in React. This means we only
