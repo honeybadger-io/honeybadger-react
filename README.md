@@ -20,19 +20,6 @@ This version is considered suitable for preview.
 
 ## Usage
 
-### HoneyBadgerErrorBoundary Props
-
-<dl>
-  <dt><code>honeybadger</code></dt>
-  <dd>The Honeybadger config object.</dd>
-  <dt><code>children</code></dt>
-  <dd>Your root `<App />` component.</dd>
-
-  <dt><code>ErrorComponent</code> (optional &mdash; default: "DefaultErrorComponent")</dt>
-  <dd>The component that will be rendered in <code> ErrorBoundary </code> children's place when an error is thrown during React rendering. The default value for this prop is the <code>DefaultErrorComponent</code>.
-</dd>
-</dl>
-
 ### In your main.js
 
 ```jsx
@@ -44,6 +31,19 @@ ReactDOM.render(
 )
 
 ```
+
+### HoneyBadgerErrorBoundary Props
+
+<dl>
+  <dt><code>honeybadger</code></dt>
+  <dd>The Honeybadger config object.</dd>
+
+  <dt><code>children</code></dt>
+  <dd>Your root <code>&#60;App &#47;&#62;</code> component.</dd>
+
+  <dt><code>ErrorComponent</code> (optional &mdash; default: "DefaultErrorComponent")</dt>
+  <dd>The component that will be rendered in <code> ErrorBoundary </code> children's place when an error is thrown during React rendering. The default value for this prop is the <code>DefaultErrorComponent</code>.</dd>
+</dl>
 
 ### DefaultErrorComponent
 
