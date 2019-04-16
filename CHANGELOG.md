@@ -5,9 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Update honeybadger-js to v1.0. See
+  https://github.com/honeybadger-io/honeybadger-js/blob/master/CHANGELOG.md
 
 ## [0.0.2] - 2019-01-21
-* Add TypeScript definition
+### Added
+- Add TypeScript definition
 
 ## [0.0.1] - 2018-11-30
-* Initial release
+### Added
+- Initial release
