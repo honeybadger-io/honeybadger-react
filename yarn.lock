@@ -5430,9 +5430,9 @@ home-or-tmp@^2.0.0:
     os-tmpdir "^1.0.1"
 
 honeybadger-js@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-1.0.3.tgz#e4b406a905f3a6f5182735a15b6f210e032acfdb"
-  integrity sha512-SS3Ane5QQ+DT6EL+hsby5YOHNPH6Vc60gdm9XZH2PRJ03plyrj1zRNhi6HaRw2wsFVHk10n2vPkjVDQ89mFlRQ==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-1.0.4.tgz#12f067e5c9308c40d25549807742b1f184321aaa"
+  integrity sha512-bqVVTODgzgOdvC+Pur0HHhTtMMo3FI+h0Y7hNzWAJY/bPFSJQfEy1X8YHcZ1gO8HkSrTvg+lIx5UANHNmfbIhg==
 
 hoopy@^0.1.2:
   version "0.1.4"
