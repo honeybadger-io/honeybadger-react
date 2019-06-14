@@ -17,7 +17,7 @@ export default class HoneyBadgerErrorBoundary extends Component {
   static propTypes = {
     honeybadger: PropTypes.object,
     children: PropTypes.element,
-    ErrorComponent: PropTypes.element || PropTypes.function
+    ErrorComponent: PropTypes.element || PropTypes.func
   }
 
   constructor (props) {
