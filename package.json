@@ -43,7 +43,7 @@
     "gh-pages": "^2.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "^2.1.1",
+    "react-scripts": "^3.0.1",
     "react-test-renderer": "^16.6.3",
     "rollup": "^0.68.2",
     "rollup-plugin-babel": "^3.0.7",
