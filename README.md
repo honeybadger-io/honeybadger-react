@@ -47,8 +47,8 @@ To run it, issue these commands from your shell:
 
 ```bash
 cd example
-yarn install
-REACT_APP_HONEYBADGER_API_KEY=b425b636 yarn start
+npm install
+REACT_APP_HONEYBADGER_API_KEY=b425b636 npm run start
 ```
 
 This will serve the demo app with hot reload at localhost:3000
@@ -71,16 +71,16 @@ See https://github.com/honeybadger-io/honeybadger-react/blob/master/CHANGELOG.md
 
 ``` bash
 # install dependencies
-yarn install
+npm install
 
 # build for production
-yarn build
+npm run build
 
 # run unit tests
-yarn test
+npm test
 
 # automatically continuously rebuild the dist/ artifacts with hot reload when developing
-yarn start
+npm run start
 ```
 
 ## Releasing
