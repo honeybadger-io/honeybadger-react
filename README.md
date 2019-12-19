@@ -1,6 +1,6 @@
 # Honeybadger React.js Integration
-[![Build Status](https://travis-ci.org/honeybadger-io/honeybadger-react.svg?branch=master)](https://travis-ci.org/honeybadger-io/honeybadger-react)
 
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhoneybadger-io%2Fhoneybadger-react%2Fbadge&style=flat)](https://actions-badge.atrox.dev/honeybadger-io/honeybadger-react/goto)
 > [React.js integration for Honeybadger.io](https://www.honeybadger.io/for/javascript/?utm_source=github&utm_medium=readme&utm_campaign=react&utm_content=React.js+integration+for+Honeybadger.io)
 
 ## Documentation and Support
