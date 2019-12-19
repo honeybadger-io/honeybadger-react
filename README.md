@@ -37,6 +37,24 @@ your own build environment may be just different enough to require some
 adjustments. If you find that our artifacts don't quite meet your needs,
 please [file an issue on GitHub](https://github.com/honeybadger-io/honeybadger-react/issues).
 
+## Example app
+
+There's a minimal implementation of a honeybadger-react integration in the ./example
+folder. If you want to contribute a patch to honeybadger-react, it can be useful to have
+the demo app running.
+
+To run it, issue these commands from your shell:
+
+```bash
+cd example
+yarn install
+REACT_APP_HONEYBADGER_API_KEY=b425b636 yarn start
+```
+
+This will serve the demo app with hot reload at localhost:3000
+
+For a detailed explanation on how hot reloading works, check out the [guide](http://reactjs-templates.github.io/webpack/) and [docs for react-loader](http://reactjs.github.io/react-loader).
+
 ## Changelog
 
 See https://github.com/honeybadger-io/honeybadger-react/blob/master/CHANGELOG.md
@@ -65,23 +83,14 @@ yarn test
 yarn start
 ```
 
-## Example app
+## Releasing
 
-There's a minimal implementation of a honeybadger-react integration in the ./example
-folder. If you want to contribute a patch to honeybadger-react, it can be useful to have
-the demo app running.
+1. With a clean working tree, use `npm version [new version]` to bump the version,
+   commit the changes, tag the release, and push to GitHub. See `npm help version`
+   for documentation.
+2. To publish the release, use `npm publish`. See `npm help publish` for
+   documentation.
 
-To run it, issue these commands from your shell:
-
-```bash
-cd example
-yarn install
-REACT_APP_HONEYBADGER_API_KEY=b425b636 yarn start
-```
-
-This will serve the demo app with hot reload at localhost:3000
-
-For a detailed explanation on how hot reloading works, check out the [guide](http://reactjs-templates.github.io/webpack/) and [docs for react-loader](http://reactjs.github.io/react-loader).
 
 ### License
 

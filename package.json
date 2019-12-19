@@ -24,7 +24,11 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "preversion": "npm test",
+    "version": "scripts/update-versions.sh",
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm build && npm test"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
