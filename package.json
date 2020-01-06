@@ -55,7 +55,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-uglify": "^6.0.0",
-    "rollup-plugin-url": "^2.2.0",
+    "rollup-plugin-url": "^3.0.1",
     "sinon": "^8.0.2"
   },
   "files": [
