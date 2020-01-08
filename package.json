@@ -59,7 +59,8 @@
     "sinon": "^8.0.2"
   },
   "files": [
-    "dist"
+    "dist",
+    "honeybadger-react.d.ts"
   ],
   "dependencies": {
     "honeybadger-js": "^2.0.0"
