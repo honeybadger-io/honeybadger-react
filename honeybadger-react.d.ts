@@ -1,8 +1,9 @@
 declare module "@honeybadger-io/react" {
   import { Component } from "react";
+  import Honeybadger from "honeybadger-js";
 
   interface Props {
-    honeybadger: void;
+    honeybadger: Honeybadger;
     children: React.ReactNode;
     ErrorComponent?: React.ReactNode | Function;
   }
