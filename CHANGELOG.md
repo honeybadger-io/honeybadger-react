@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Update honeybadger-js to 2.2.1 (security release, see
+    [here](https://github.com/honeybadger-io/honeybadger-js/blob/master/CHANGELOG.md#220---2020-03-16))
 
 ## [0.0.6] - 2020-01-08
 ### Fixed
