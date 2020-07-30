@@ -63,6 +63,6 @@
     "honeybadger-react.d.ts"
   ],
   "dependencies": {
-    "honeybadger-js": "^2.2.1"
+    "honeybadger-js": "^2.3.0-beta.0"
   }
 }
