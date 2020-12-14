@@ -43,7 +43,7 @@
     "@babel/preset-react": "^7.8.3",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^11.0.1",
-    "@rollup/plugin-url": "^5.0.0",
+    "@rollup/plugin-url": "^6.0.0",
     "@svgr/rollup": "^5.3.1",
     "cross-env": "^7.0.0",
     "gh-pages": "^3.0.0",
