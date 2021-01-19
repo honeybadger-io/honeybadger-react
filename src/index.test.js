@@ -5,7 +5,7 @@ import HbErrorBoundary from './'
 import sinon from 'sinon'
 
 describe('HoneybadgerReact', () => {
-  let config = {api_key: 'FFAACCCC00'}
+  let config = {apiKey: 'FFAACCCC00'}
   let honeybadger = Honeybadger.configure(config)
 
   class Clean extends React.Component {
