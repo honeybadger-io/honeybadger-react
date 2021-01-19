@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Migrate honeybadger-js dependency to @honeybadger-io/js 3.0.0
+  See https://docs.honeybadger.io/lib/javascript/support/upgrading-to-v3.html
 
 ## [0.0.8] - 2020-09-24
 ### Fixed

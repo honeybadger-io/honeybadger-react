@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 
-import Honeybadger from 'honeybadger-js'
+import Honeybadger from '@honeybadger-io/js'
 import ErrorBoundary from '@honeybadger-io/react'
 
 Honeybadger.configure({
