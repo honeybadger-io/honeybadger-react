@@ -826,9 +826,17 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@honeybadger-io/react@link:..":
-  version "0.0.0"
-  uid ""
+"@honeybadger-io/js@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@honeybadger-io/js/-/js-3.0.0.tgz#853e91f5ce3ac050f6f7a6df2c93ed6ddccdad26"
+  integrity sha512-lgUkClIfcPd0KwaLHoxzMrug2xx4Q5Ub8bglH0or/7y5f6GaxtMptlZDpchdISBD9XDty55iQU8f+2vMumnPyw==
+  dependencies:
+    stacktrace-parser "^0.1.10"
+
+"@honeybadger-io/react@file:..":
+  version "0.0.8"
+  dependencies:
+    "@honeybadger-io/js" "^3.0.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -4293,11 +4301,6 @@ homedir-polyfill@^1.0.1:
   integrity sha1-TCu8inWJmP7r9e1oWA921GdotLw=
   dependencies:
     parse-passwd "^1.0.0"
-
-honeybadger-js@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-2.2.1.tgz#96c775cb5d016efd9597c0293cfc6ef4cb956579"
-  integrity sha512-KF1azMMFLm9km019DEORB5PaWGw5SylE8WTxXoG96655QFHXA4ToM5t+8/Po9TKZ5YhrULTVow6ly1h2aQ8qpg==
 
 hoopy@^0.1.2:
   version "0.1.4"
@@ -8692,6 +8695,13 @@ stack-utils@^1.0.1:
   resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.2.tgz#33eba3897788558bebfc2db059dc158ec36cebb8"
   integrity sha512-MTX+MeG5U994cazkjd/9KNAapsHnibjMLnfXodlkXw76JEea0UiNzrqidzo1emMwk7w5Qhc9jd4Bn9TBb1MFwA==
 
+stacktrace-parser@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/stacktrace-parser/-/stacktrace-parser-0.1.10.tgz#29fb0cae4e0d0b85155879402857a1639eb6051a"
+  integrity sha512-KJP1OCML99+8fhOHxwwzyWrlUuVX5GQ0ZpJTd1DFXhdkrvg1szxfHhawXUZ3g9TkXORQd4/WG68jMlQZ2p8wlg==
+  dependencies:
+    type-fest "^0.7.1"
+
 static-extend@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
@@ -9129,6 +9139,11 @@ type-check@~0.3.2:
   integrity sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
   dependencies:
     prelude-ls "~1.1.2"
+
+type-fest@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.7.1.tgz#8dda65feaf03ed78f0a3f9678f1869147f7c5c48"
+  integrity sha512-Ne2YiiGN8bmrmJJEuTWTLJR32nh/JdL1+PSicowtNb0WFpn59GK8/lfD61bVtzguz7b3PBt74nxpv/Pw5po5Rg==
 
 type-is@~1.6.16:
   version "1.6.16"
