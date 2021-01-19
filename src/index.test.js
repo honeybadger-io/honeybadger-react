@@ -1,5 +1,5 @@
 import React from 'react'
-import Honeybadger from 'honeybadger-js'
+import Honeybadger from '@honeybadger-io/js'
 import TestRenderer from 'react-test-renderer'
 import HbErrorBoundary from './'
 import sinon from 'sinon'

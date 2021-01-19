@@ -1,6 +1,6 @@
 declare module "@honeybadger-io/react" {
   import { Component } from "react";
-  import Honeybadger from "honeybadger-js";
+  import Honeybadger from "@honeybadger-io/js";
 
   interface Props {
     honeybadger: Honeybadger;
