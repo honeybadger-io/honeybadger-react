@@ -3,7 +3,7 @@ declare module "@honeybadger-io/react" {
   import Honeybadger from "@honeybadger-io/js";
 
   interface Props {
-    honeybadger: Honeybadger;
+    honeybadger: typeof Honeybadger;
     children: React.ReactNode;
     ErrorComponent?: React.ReactNode | Function;
   }
