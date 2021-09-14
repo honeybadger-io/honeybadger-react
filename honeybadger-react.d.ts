@@ -1,16 +1,15 @@
 declare module "@honeybadger-io/react" {
-  import { Component } from "react";
-  import Honeybadger from "@honeybadger-io/js";
+  import React from "react";
+  import BrowserClient from "@honeybadger-io/js/dist/browser/types/core/client";
+  import ServerClient from "@honeybadger-io/js/dist/server/types/core/client";
 
   interface Props {
-    honeybadger: Honeybadger;
+    honeybadger: BrowserClient & ServerClient;
     children: React.ReactNode;
     ErrorComponent?: React.ReactNode | Function;
   }
 
-  class ErrorBoundary extends Component<Props> {}
+  declare const ErrorBoundary: React.ComponentType<Props>;
 
-  namespace ErrorBoundary {}
-
-  export = ErrorBoundary;
+  export default ErrorBoundary;
 }
