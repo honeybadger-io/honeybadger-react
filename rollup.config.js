@@ -40,13 +40,15 @@ export default {
       globals: {
         'react': 'React',
         'prop-types': 'PropTypes',
-        '@honeybadger-io/js': 'Honeybadger'
+        '@honeybadger-io/js': 'Honeybadger',
+        'react/jsx-runtime': 'jsxRuntime'
       }
     }
   ],
   external: [
     'react',
     'prop-types',
+    'react/jsx-runtime',
     '@honeybadger-io/js'
   ],
   plugins: [
