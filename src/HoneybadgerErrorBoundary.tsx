@@ -3,16 +3,16 @@ import HoneybadgerClient from '@honeybadger-io/js/dist/browser/types/core/client
 import DefaultErrorComponent, {DefaultErrorComponentProps} from "./DefaultErrorComponent"
 import PropTypes from "prop-types";
 
-interface HoneyBadgerErrorBoundaryProps {
+interface HoneybadgerErrorBoundaryProps {
   honeybadger: HoneybadgerClient
   ErrorComponent?: ReactNode
 }
 
-interface HoneyBadgerErrorBoundaryState extends DefaultErrorComponentProps {
+interface HoneybadgerErrorBoundaryState extends DefaultErrorComponentProps {
   errorOccurred: boolean
 }
 
-export default class HoneyBadgerErrorBoundary extends Component<HoneyBadgerErrorBoundaryProps, HoneyBadgerErrorBoundaryState> {
+export default class HoneybadgerErrorBoundary extends Component<HoneybadgerErrorBoundaryProps, HoneybadgerErrorBoundaryState> {
 
   static propTypes = {
     honeybadger: PropTypes.object.isRequired,
@@ -20,7 +20,7 @@ export default class HoneyBadgerErrorBoundary extends Component<HoneyBadgerError
     ErrorComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
   }
 
-  constructor(props: HoneyBadgerErrorBoundaryProps) {
+  constructor(props: HoneybadgerErrorBoundaryProps) {
     super(props)
     this.state = {
       error: null,
@@ -29,7 +29,7 @@ export default class HoneyBadgerErrorBoundary extends Component<HoneyBadgerError
     }
   }
 
-  public static getDerivedStateFromError(error: Error): HoneyBadgerErrorBoundaryState {
+  public static getDerivedStateFromError(error: Error): HoneybadgerErrorBoundaryState {
     return {error: error, errorOccurred: true, info: null}
   }
 
