@@ -1,7 +1,6 @@
 import React from 'react'
-import Honeybadger from '@honeybadger-io/js'
 import TestRenderer from 'react-test-renderer'
-import HbErrorBoundary from './'
+import {Honeybadger, HoneybadgerErrorBoundary} from './'
 import sinon from 'sinon'
 
 describe('HoneybadgerReact', () => {
@@ -45,14 +44,14 @@ describe('HoneybadgerReact', () => {
   }
 
   it('should render the default component when there are no errors', () => {
-    const testRenderer = TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger}><Clean /></HbErrorBoundary>)
+    const testRenderer = TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger}><Clean /></HoneybadgerErrorBoundary>)
     const testInstance = testRenderer.root
     expect(testInstance.findByType(Clean)).toBeDefined()
   })
 
   it("should invoke Honeybadger's notify when a component errors", (done) => {
     sandbox.spy(honeybadger, 'notify')
-    TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger}><Broken /></HbErrorBoundary>)
+    TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger}><Broken /></HoneybadgerErrorBoundary>)
     afterNotify(done, function () {
       expect(honeybadger.notify.calledOnce).toBeTruthy()
     })
@@ -60,7 +59,7 @@ describe('HoneybadgerReact', () => {
 
   describe('when no custom error component is available', () => {
     it('should render a default error message when a component errors', () => {
-      const testRenderer = TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger}><Broken /></HbErrorBoundary>)
+      const testRenderer = TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger}><Broken /></HoneybadgerErrorBoundary>)
       const testInstance = testRenderer.root
       expect(testInstance.findByProps({className: 'error'})).toBeDefined()
     })
@@ -71,7 +70,7 @@ describe('HoneybadgerReact', () => {
       sandbox.spy(honeybadger, 'notify')
 
       const MyError = jest.fn(() => 'custom error view')
-      TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger} ErrorComponent={MyError}><Broken /></HbErrorBoundary>)
+      TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger} ErrorComponent={MyError}><Broken /></HoneybadgerErrorBoundary>)
       expect(MyError).toBeCalledWith({
         error: expect.any(Error),
         info: { componentStack: expect.any(String) },
