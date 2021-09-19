@@ -38,7 +38,10 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-typescript": "^8.2.5",
+    "@types/jest": "^27.0.1",
     "@types/react": "^17.0.20",
+    "@types/react-test-renderer": "^17.0.1",
+    "@types/sinon": "^10.0.2",
     "cross-env": "^7.0.0",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",

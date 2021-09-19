@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {ReactNode} from 'react'
 import TestRenderer from 'react-test-renderer'
 import {Honeybadger, HoneybadgerErrorBoundary} from './'
-import sinon from 'sinon'
+import sinon, {SinonSpy} from 'sinon'
 
 describe('HoneybadgerReact', () => {
   let config = {apiKey: 'FFAACCCC00'}
@@ -14,14 +14,14 @@ describe('HoneybadgerReact', () => {
   }
 
   class Broken extends React.Component {
-    render() {
+    render(): ReactNode {
       throw Error('Busted, sorry')
     }
   }
 
-  var requests, xhr
+  let requests, xhr
 
-  var sandbox = sinon.createSandbox()
+  const sandbox = sinon.createSandbox()
   beforeEach(function () {
     // Stub HTTP requests.
     requests = []
@@ -36,7 +36,7 @@ describe('HoneybadgerReact', () => {
     sandbox.restore()
   })
 
-  function afterNotify (done, run) {
+  function afterNotify (done: () => void, run: () => void) {
     setTimeout(function () {
       run()
       done()
@@ -53,7 +53,7 @@ describe('HoneybadgerReact', () => {
     sandbox.spy(honeybadger, 'notify')
     TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger}><Broken /></HoneybadgerErrorBoundary>)
     afterNotify(done, function () {
-      expect(honeybadger.notify.calledOnce).toBeTruthy()
+      sinon.assert.calledOnce(honeybadger.notify as SinonSpy)
     })
   })
 
@@ -78,7 +78,7 @@ describe('HoneybadgerReact', () => {
       }, {})
       // Still want to ensure notify is only called once. The MyError component will be created twice by React.
       afterNotify(done, function () {
-        expect(honeybadger.notify.calledOnce).toBeTruthy()
+        sinon.assert.calledOnce(honeybadger.notify as SinonSpy)
       })
      })
   })
