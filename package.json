@@ -32,18 +32,31 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0 || ^17.0.0"
+    "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-external-helpers": "^7.14.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-typescript": "^8.2.5",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-url": "^6.1.0",
+    "@svgr/rollup": "^5.3.1",
     "@types/react": "^17.0.20",
     "cross-env": "^7.0.0",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
     "react-test-renderer": "^17.0.2",
     "rollup": "^2.56.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^4.0.1",
     "sinon": "^11.1.2",
     "typescript": "^4.4.3"
   },
