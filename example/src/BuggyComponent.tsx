@@ -1,16 +1,21 @@
-import React, { Component } from 'react'
+import {Component} from "react"
 
-export default class BuggyComponent extends Component {
-  constructor(props) {
-    super(props)
+export default class BuggyComponent extends Component<{}, { error: boolean }> {
+
+  constructor(props: {}) {
+    super(props);
+    this.bug = this.bug.bind(this)
     this.state = {
       error: false
     }
   }
 
-  bug = () => {
-    this.setState({error: true})
+  bug() {
+    this.setState({
+      error: true
+    })
   }
+
   render () {
     if (this.state.error) {
       throw Error('oops.')
@@ -21,4 +26,5 @@ export default class BuggyComponent extends Component {
       </div>
     )
   }
+
 }

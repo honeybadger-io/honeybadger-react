@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import {Component} from "react";
 
-export default class GoodComponent extends Component {
+export default class GoodComponent extends Component<{}, {}> {
+
   render () {
     return (
       <div>
@@ -8,4 +9,5 @@ export default class GoodComponent extends Component {
       </div>
     )
   }
+
 }
