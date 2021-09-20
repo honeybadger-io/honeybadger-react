@@ -4,8 +4,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 
-import Honeybadger from '@honeybadger-io/js'
-import ErrorBoundary from '@honeybadger-io/react'
+import {Honeybadger, HoneybadgerErrorBoundary} from '@honeybadger-io/react'
 
 Honeybadger.configure({
   apiKey: (process.env.REACT_APP_HONEYBADGER_API_KEY || prompt('Enter the API key for your Honeybadger project:')),
@@ -13,8 +12,8 @@ Honeybadger.configure({
 })
 
 ReactDOM.render(
-  <ErrorBoundary honeybadger={Honeybadger}>
+  <HoneybadgerErrorBoundary honeybadger={Honeybadger}>
     <App />
-  </ErrorBoundary>,
+  </HoneybadgerErrorBoundary>,
   document.getElementById('root')
 )
