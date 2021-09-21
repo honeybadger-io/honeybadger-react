@@ -1,6 +1,6 @@
 {
   "name": "@honeybadger-io/react",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "React.js integration for honeybadger",
   "author": "Jason Truesdell <jason@yuzuten.com> (https://github.com/JasonTrue)",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "url": "git+ssh://git@github.com/honeybadger-io/honeybadger-react.git"
   },
   "main": "dist/honeybadger-react.cjs.js",
-  "types": "./honeybadger-react.d.ts",
+  "types": "./dist/index.d.ts",
   "module": "dist/honeybadger-react.esm.js",
   "unpkg": "dist/honeybadger-react.js",
   "jsnext:main": "dist/honeybadger-react.esm.js",
@@ -20,7 +20,7 @@
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build": "rollup -c",
+    "build": "tsc --emitDeclarationOnly --noEmit false && rollup -c",
     "start": "rollup -c -w",
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
@@ -36,31 +36,23 @@
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/plugin-external-helpers": "^7.14.5",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-react": "^7.14.5",
     "@rollup/plugin-commonjs": "^20.0.0",
-    "@rollup/plugin-node-resolve": "^13.0.4",
-    "@rollup/plugin-url": "^6.1.0",
-    "@svgr/rollup": "^5.3.1",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/jest": "^27.0.1",
+    "@types/react": "^17.0.20",
+    "@types/react-test-renderer": "^17.0.1",
+    "@types/sinon": "^10.0.2",
     "cross-env": "^7.0.0",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
     "react-test-renderer": "^17.0.2",
     "rollup": "^2.56.3",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-peer-deps-external": "^2.2.2",
-    "rollup-plugin-postcss": "^4.0.1",
-    "rollup-plugin-uglify": "^6.0.4",
-    "sinon": "^11.1.2"
+    "sinon": "^11.1.2",
+    "typescript": "^4.4.3"
   },
   "files": [
-    "dist",
-    "honeybadger-react.d.ts"
+    "dist"
   ],
   "dependencies": {
     "@honeybadger-io/js": "^3.2.4"

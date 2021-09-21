@@ -1,8 +1,7 @@
-import React from 'react'
-import Honeybadger from '@honeybadger-io/js'
+import React, {ReactNode} from 'react'
 import TestRenderer from 'react-test-renderer'
-import HbErrorBoundary from './'
-import sinon from 'sinon'
+import {Honeybadger, HoneybadgerErrorBoundary} from './'
+import sinon, {SinonSpy} from 'sinon'
 
 describe('HoneybadgerReact', () => {
   let config = {apiKey: 'FFAACCCC00'}
@@ -15,14 +14,14 @@ describe('HoneybadgerReact', () => {
   }
 
   class Broken extends React.Component {
-    render() {
+    render(): ReactNode {
       throw Error('Busted, sorry')
     }
   }
 
-  var requests, xhr
+  let requests, xhr
 
-  var sandbox = sinon.createSandbox()
+  const sandbox = sinon.createSandbox()
   beforeEach(function () {
     // Stub HTTP requests.
     requests = []
@@ -37,7 +36,7 @@ describe('HoneybadgerReact', () => {
     sandbox.restore()
   })
 
-  function afterNotify (done, run) {
+  function afterNotify (done: () => void, run: () => void) {
     setTimeout(function () {
       run()
       done()
@@ -45,22 +44,22 @@ describe('HoneybadgerReact', () => {
   }
 
   it('should render the default component when there are no errors', () => {
-    const testRenderer = TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger}><Clean /></HbErrorBoundary>)
+    const testRenderer = TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger}><Clean /></HoneybadgerErrorBoundary>)
     const testInstance = testRenderer.root
     expect(testInstance.findByType(Clean)).toBeDefined()
   })
 
   it("should invoke Honeybadger's notify when a component errors", (done) => {
     sandbox.spy(honeybadger, 'notify')
-    TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger}><Broken /></HbErrorBoundary>)
+    TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger}><Broken /></HoneybadgerErrorBoundary>)
     afterNotify(done, function () {
-      expect(honeybadger.notify.calledOnce).toBeTruthy()
+      sinon.assert.calledOnce(honeybadger.notify as SinonSpy)
     })
   })
 
   describe('when no custom error component is available', () => {
     it('should render a default error message when a component errors', () => {
-      const testRenderer = TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger}><Broken /></HbErrorBoundary>)
+      const testRenderer = TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger}><Broken /></HoneybadgerErrorBoundary>)
       const testInstance = testRenderer.root
       expect(testInstance.findByProps({className: 'error'})).toBeDefined()
     })
@@ -71,7 +70,7 @@ describe('HoneybadgerReact', () => {
       sandbox.spy(honeybadger, 'notify')
 
       const MyError = jest.fn(() => 'custom error view')
-      TestRenderer.create(<HbErrorBoundary honeybadger={honeybadger} ErrorComponent={MyError}><Broken /></HbErrorBoundary>)
+      TestRenderer.create(<HoneybadgerErrorBoundary honeybadger={honeybadger} ErrorComponent={MyError}><Broken /></HoneybadgerErrorBoundary>)
       expect(MyError).toBeCalledWith({
         error: expect.any(Error),
         info: { componentStack: expect.any(String) },
@@ -79,7 +78,7 @@ describe('HoneybadgerReact', () => {
       }, {})
       // Still want to ensure notify is only called once. The MyError component will be created twice by React.
       afterNotify(done, function () {
-        expect(honeybadger.notify.calledOnce).toBeTruthy()
+        sinon.assert.calledOnce(honeybadger.notify as SinonSpy)
       })
      })
   })
