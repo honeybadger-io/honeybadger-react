@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.0.0] - 2021-09-24
 ### Changed
 - Transform to a typescript project
 - [Breaking change] Export core `Honeybadger` from `@honeybadger-io/js` to simplify integration. Read more at [PR](https://github.com/honeybadger-io/honeybadger-react/pull/275).
