@@ -54,7 +54,7 @@ REACT_APP_HONEYBADGER_API_KEY=b425b636 npm run start
 
 This will serve the demo app with hot reload at localhost:3000
 
-For a detailed explanation on how hot reloading works, check out the [guide](http://reactjs-templates.github.io/webpack/) and [docs for react-loader](http://reactjs.github.io/react-loader).
+For a detailed explanation on how hot reloading works, check out the [documentation](https://webpack.js.org/concepts/hot-module-replacement/).
 
 ## Changelog
 
