@@ -36,8 +36,8 @@
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.3",
-    "@rollup/plugin-typescript": "^8.3.1",
+    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-typescript": "^8.3.2",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.44",
     "@types/react-test-renderer": "^18.0.0",
@@ -47,8 +47,8 @@
     "react": "^18.0.0",
     "react-scripts": "^4.0.3",
     "react-test-renderer": "^18.0.0",
-    "rollup": "^2.70.1",
-    "sinon": "^13.0.1",
+    "rollup": "^2.70.2",
+    "sinon": "^13.0.2",
     "typescript": "^4.6.3"
   },
   "files": [
