@@ -36,7 +36,7 @@
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.44",
