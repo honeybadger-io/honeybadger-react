@@ -44,12 +44,12 @@
     "@types/sinon": "^10.0.11",
     "cross-env": "^7.0.0",
     "gh-pages": "^3.2.3",
-    "react": "^18.0.0",
+    "react": "^18.1.0",
     "react-scripts": "^4.0.3",
-    "react-test-renderer": "^18.0.0",
-    "rollup": "^2.70.2",
+    "react-test-renderer": "^18.1.0",
+    "rollup": "^2.71.1",
     "sinon": "^13.0.2",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.4"
   },
   "files": [
     "dist"
