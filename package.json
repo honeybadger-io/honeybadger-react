@@ -43,7 +43,7 @@
     "@types/react-test-renderer": "^18.0.0",
     "@types/sinon": "^10.0.11",
     "cross-env": "^7.0.0",
-    "gh-pages": "^3.2.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.0.0",
     "react-scripts": "^4.0.3",
     "react-test-renderer": "^18.0.0",
