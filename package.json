@@ -55,6 +55,6 @@
     "dist"
   ],
   "dependencies": {
-    "@honeybadger-io/js": "^4.0.2"
+    "@honeybadger-io/js": "^4.0.3"
   }
 }
