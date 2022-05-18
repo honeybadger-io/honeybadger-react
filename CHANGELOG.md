@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Changed
-- Update to @honeybadger-io/js v4
+- Update to @honeybadger-io/js@4
+- Set peerDeps to react@18
 
 ## [2.0.1] - 2022-03-16
 ### Fixed

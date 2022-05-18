@@ -32,8 +32,8 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
+    "react": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
@@ -44,9 +44,9 @@
     "@types/sinon": "^10.0.11",
     "cross-env": "^7.0.0",
     "gh-pages": "^4.0.0",
-    "react": "^18.0.0",
-    "react-scripts": "^4.0.3",
-    "react-test-renderer": "^18.0.0",
+    "react": "^18.1.0",
+    "react-scripts": "^5.0.1",
+    "react-test-renderer": "^18.1.0",
     "rollup": "^2.70.2",
     "sinon": "^14.0.0",
     "typescript": "^4.6.3"
