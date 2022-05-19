@@ -15,12 +15,13 @@ jobs:
           ref: master
       - uses: actions/setup-node@v1
         with:
+          node-version: '16.x'
           registry-url: "https://registry.npmjs.org"
       - run: |
           if [ -f "yarn.lock" ]; then
             yarn install
           else
-            npm install
+            npm ci
           fi
       - run: npx shipjs trigger
         env:
