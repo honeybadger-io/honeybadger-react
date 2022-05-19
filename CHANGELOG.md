@@ -1,3 +1,17 @@
+# [2.1.0](https://github.com/honeybadger-io/honeybadger-react/compare/v2.0.1...v2.1.0) (2022-05-19)
+
+
+### Bug Fixes
+
+* use node 16 and npm ci in shipjs workflows ([#333](https://github.com/honeybadger-io/honeybadger-react/issues/333)) ([b0eef94](https://github.com/honeybadger-io/honeybadger-react/commit/b0eef94574dca7c29782eac301d6666671cf47e0)), closes [#327](https://github.com/honeybadger-io/honeybadger-react/issues/327)
+
+
+### Features
+
+* shipjs integration ([2947f08](https://github.com/honeybadger-io/honeybadger-react/commit/2947f084c62fd557852a9eef9b0a1de1e9ec82a9)), closes [#327](https://github.com/honeybadger-io/honeybadger-react/issues/327)
+
+
+
 ## [2.0.1] - 2022-03-16
 ### Fixed
 - Generate inline sources in source maps (fixes a source maps error with create-react-app v5) (#299)
