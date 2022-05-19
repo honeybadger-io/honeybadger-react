@@ -1,14 +1,3 @@
-# Changelog
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
-### Changed
-- Update to @honeybadger-io/js@4
-- Set peerDeps to react@18
-
 ## [2.0.1] - 2022-03-16
 ### Fixed
 - Generate inline sources in source maps (fixes a source maps error with create-react-app v5) (#299)

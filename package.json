@@ -22,13 +22,14 @@
     "test:watch": "react-scripts test --env=jsdom",
     "build": "tsc --emitDeclarationOnly --noEmit false && rollup -c",
     "start": "rollup -c -w",
-    "prepare": "npm run build",
+    "prepare": "npm run build && husky install",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
     "preversion": "npm test",
     "version": "scripts/update-versions.sh",
     "postversion": "git push && git push --tags",
-    "prepublishOnly": "npm build && npm test"
+    "prepublishOnly": "npm build && npm test",
+    "release": "shipjs prepare"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -36,6 +37,8 @@
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/jest": "^27.4.1",
@@ -44,16 +47,16 @@
     "@types/sinon": "^10.0.11",
     "cross-env": "^7.0.0",
     "gh-pages": "^4.0.0",
+    "husky": "^8.0.0",
     "react": "^18.1.0",
     "react-scripts": "^5.0.1",
     "react-test-renderer": "^18.1.0",
     "rollup": "^2.70.2",
+    "shipjs": "0.24.4",
     "sinon": "^14.0.0",
     "typescript": "^4.6.3"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
     "@honeybadger-io/js": "^4.0.3"
   }
