@@ -28,7 +28,7 @@
     "preversion": "npm test",
     "version": "scripts/update-versions.sh",
     "postversion": "git push && git push --tags",
-    "prepublishOnly": "npm build && npm test",
+    "prepublishOnly": "npm run build && npm test",
     "release": "shipjs prepare"
   },
   "peerDependencies": {
