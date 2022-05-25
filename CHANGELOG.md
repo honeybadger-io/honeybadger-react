@@ -11,11 +11,6 @@
 * shipjs integration ([2947f08](https://github.com/honeybadger-io/honeybadger-react/commit/2947f084c62fd557852a9eef9b0a1de1e9ec82a9)), closes [#327](https://github.com/honeybadger-io/honeybadger-react/issues/327)
 
 
-### Reverts
-
-* Revert "chore: release v2.1.0 (#334)" ([5890da4](https://github.com/honeybadger-io/honeybadger-react/commit/5890da409196537fa61fa2c8014708d2a1552f3d)), closes [#334](https://github.com/honeybadger-io/honeybadger-react/issues/334)
-
-
 
 ## [2.0.1] - 2022-03-16
 ### Fixed
