@@ -59,6 +59,7 @@ For a detailed explanation on how hot reloading works, check out the [documentat
 ## Changelog
 
 See https://github.com/honeybadger-io/honeybadger-react/blob/master/CHANGELOG.md
+Changelog is automatically generated with [our release automation process](#release-automation).
 
 ## Contributing
 
@@ -92,6 +93,16 @@ npm run start
 2. To publish the release, use `npm publish`. See `npm help publish` for
    documentation.
 
+### Release Automation
+
+We use [Ship.js](https://github.com/algolia/shipjs) to automate releasing.
+
+Ship.js creates a PR once per week when unreleased changes are present. You can also trigger a release PR by saying "@shipjs prepare" in any issue or pull request comment on GitHub.
+
+#### Troubleshooting a failed Ship.js release
+
+If a ship.js release fails, you need to revert the release commit and delete the release branch (e.g `releases/v1.1.0`)
+Then, you can debug the issue by simulating the release process locally (`npm run release -- --dry-run --yes --no-browse`).
 
 ### License
 
