@@ -42,7 +42,7 @@
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/jest": "^29.0.0",
-    "@types/react": "^17.0.44",
+    "@types/react": "^18.0.21",
     "@types/react-test-renderer": "^18.0.0",
     "@types/sinon": "^10.0.11",
     "cross-env": "^7.0.0",
