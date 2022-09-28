@@ -2,6 +2,9 @@
 
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhoneybadger-io%2Fhoneybadger-react%2Fbadge&style=flat)](https://actions-badge.atrox.dev/honeybadger-io/honeybadger-react/goto)
 [![npm version](https://badge.fury.io/js/%40honeybadger-io%2Freact.svg)](https://badge.fury.io/js/%40honeybadger-io%2Freact)
+
+> **Note:** This repository has been moved to [@honeybadger-io/js](https://github.com/honeybadger-io/honeybadger-js), home to all Honeybadger's JavaScript packages.
+
 > [React.js integration for Honeybadger.io](https://www.honeybadger.io/for/javascript/?utm_source=github&utm_medium=readme&utm_campaign=react&utm_content=React.js+integration+for+Honeybadger.io)
 
 ## Documentation and Support
